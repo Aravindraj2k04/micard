@@ -38,4 +38,7 @@ flutter:
         - asset: fonts/Handjet-VariableFont_ELGR,ELSH,wght.ttf
           style: italic
 
-  
+    - family: Titllium Web
+      fonts:
+        - asset: fonts/TitilliumWeb-ExtraLightItalic.ttf
+          style: italic
