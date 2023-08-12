@@ -10,14 +10,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
+        
         backgroundColor: Color.fromARGB(255, 14, 14, 14),
         body: SafeArea(
           child: 
           Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircleAvatar(
-                radius: 70.0,
+                radius: 100.0,
                 backgroundImage: AssetImage('images/arc.jpeg'),
               ),
               Text(
@@ -34,21 +37,30 @@ class MyApp extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'Handjet',
                   fontSize: 20.0,
-                  letterSpacing: 0,
+                  letterSpacing: 1.5,
                   color: Color.fromARGB(255, 254, 254, 254),
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              //Container for first widget email
+              SizedBox(
+                height: 30.0,
+                width: 250.0,
+                child: Divider(
+                  color: Color.fromARGB(255, 126, 190, 239),
+                  thickness: 0.5,
+                ),
+              ),
+              //Container for first widget phone
               Container(
                 color: Color.fromARGB(255, 58, 74, 82),
-                padding: EdgeInsets.all(10),
+                padding: EdgeInsets.all(15),
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+
                 child: 
                 Row(
                   children: [
                   SizedBox(
-                    width: 20.0,
+                    width: 25.0,
                   ),
                   Icon(
                     Icons.phone,
@@ -58,7 +70,7 @@ class MyApp extends StatelessWidget {
                     '+91 6382764801',
                     style: TextStyle(
                       fontFamily: 'VictorMono',
-                      fontSize: 15.0,
+                      fontSize: 20.0,
                       color: Color.fromARGB(255, 126, 190, 239),
                       //fontWeight: FontWeight.bold,
                     ),
@@ -73,39 +85,81 @@ class MyApp extends StatelessWidget {
               //Second container for email
               Container(
                 color: Color.fromARGB(255, 58, 74, 82),
-                padding: EdgeInsets.all(10),
+                padding: EdgeInsets.all(12),
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
                 child:
                  Row(
                   children: [
                   SizedBox(
-                    width: 20.0,
+                    width: 25.0,
                   ),
                   Icon(
                     Icons.email,
                     color: Color.fromARGB(255, 126, 190, 239),
                   ),
                   SizedBox(
-                    width: 20.0,),
+                    width: 10.0,),
                   Text(
                     'aravindraj5054@gmail.com',
                     style: TextStyle(
                       fontFamily: 'Titllium Web',
-                      fontSize: 20.0,
+                      fontSize: 22.0,
                       color: Color.fromARGB(255, 126, 190, 239),
                       fontStyle: FontStyle.italic
                     ),
                   ),
+
                 
 
                   //Container for second widget email
+               
 
                   
                 ],
                 ),
                 
+              ),
+
+              //Third container linkdin
+              Container(
+                                color: Color.fromARGB(255, 58, 74, 82),
+                padding: EdgeInsets.all(10),
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child:
+                 Row(
+                  children: [
+                  SizedBox(
+                    width: 25.0,
+                  ),
+                  Icon(
+                    Icons.add_location_alt_rounded,
+                    color: Color.fromARGB(255, 126, 190, 239),
+                  ),
+                  SizedBox(
+                    width: 10.0,),
+                  Text(
+                    'Chennai, Tamil Nadu',
+                    style: TextStyle(
+                      fontFamily: 'Titllium Web',
+                      fontSize: 25.0,
+                      color: Color.fromARGB(255, 126, 190, 239),
+                      fontStyle: FontStyle.italic
+                    ),
+                  ),
+
+                
+
+                  //Container for second widget email
+               
+
+                  
+                ],
+                ),
               )
-            ],
+              
+                
+              
+            ],  
           ),
         ),
       ),
